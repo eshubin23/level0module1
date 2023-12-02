@@ -19,11 +19,17 @@ canvas = tk.Canvas(root, width=200, height=200, bg="#FF00FF");
 canvas.grid()
 
 '''
-Text Rendering Example:
-                    x    y                                                       
+Text Rendering Example: 
+                    x    y                                                      
 canvas.create_text(100, 50, text="text goes here", font=("Arial", 16))
 '''
 # Put your code below
-
-
+from tkinter import messagebox, simpledialog, Tk
+if __name__ == '__main__':
+    window = Tk()
+    window.withdraw()
+    banana = "ice cream"
+    for i in range(3):
+        canvas.create_text(100, 50*i+50, text=banana, font=("Arial", 16))
+    canvas.create_text(100, 50*i*i, text="banana", font=("Arial", 16))
 root.mainloop()
